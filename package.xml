@@ -32,8 +32,8 @@
   </developer>
   <date>2009-07-24</date>
   <version>
-    <release>0.1.0</release>
-    <api>0.1.0</api>
+    <release>0.1.1</release>
+    <api>0.1.1</api>
   </version>
   <stability>
     <release>alpha</release>
@@ -42,7 +42,7 @@
   <license uri="http://www.symfony-project.com/license">
     MIT license
   </license>
-  <notes>This first version of the plugin (0.1.0) only supports Website Payments Standard.</notes>
+  <notes>This first version of the plugin (0.1.1) only supports Website Payments Standard.</notes>
  
   <contents>
     <dir name="/">
@@ -123,6 +123,22 @@
   </phprelease>
  
 <changelog>
+  <release>
+    <version>
+      <release>0.1.1</release>
+      <api>0.1.1</api>
+    </version>
+    <stability>
+      <release>alpha</release>
+      <api>alpha</api>
+    </stability>
+    <license uri="http://www.symfony-project.com/license">
+      MIT license
+    </license>
+    <date>2009-07-24</date>
+    <license>MIT</license>
+    <notes>This first version of the plugin (0.1.1) only supports Website Payments Standard (updated package.xml).</notes>
+  </release>
   <release>
     <version>
       <release>0.1.0</release>
