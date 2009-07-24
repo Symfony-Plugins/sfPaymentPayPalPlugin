@@ -1,0 +1,104 @@
+sfPaymentPayPalPlugin
+=====================
+
+**WARNING : This plugin is in alpha state, therefore NOT READY for production.
+It still needs contribution to be fully functional.** 
+
+This first version of the plugin (0.1.0) only supports [Website Payments Standard](https://www.paypal.com/cgi-bin/webscr?cmd=_wp-standard-overview-outside "Website Payments Standard").
+The following versions will provide Website Payments Pro.
+
+Please visit the [official plugin page](http://wiki.github.com/letscod/sfPaymentPlugin "sfPaymentPlugin on github") of the sfPayment project for more information.
+
+**Note** : This plugin REQUIRES the [sfPaymentPlugin](http://www.symfony-project.org/plugins/sfPaymentPlugin "sfPaymentPlugin : standard, flexible and maintainable solution for managing online payments") and the 
+[sfWebBrowserPlugin](http://www.symfony-project.org/plugins/sfWebBrowserPlugin "The sfWebBrowserPlugin proposes an HTTP client capable of making web requests.").
+
+Installation
+------------
+
+  * Install the plugin
+
+        $ symfony plugin:install sfPaymentPayPalPlugin --stability=alpha
+
+  * Clear you cache
+
+        $ symfony cc
+
+  
+Configuring your plugin
+-----------------------
+  * Enable the module in your application `settings.yml`
+
+        # Activated modules from plugins or from the symfony core
+        enabled_modules:        [default, sfPaymentPayPal]
+
+  * Configure the plugin in your application `app.yml`
+
+        all:
+          #sfPaymentPayPalPlugin
+          sf_payment_paypal_plugin: 
+            business: my_production_seller_account@business.com #seller account email on paypal
+            test:
+              business: my_production_test_seller_account@business.com #test seller account email on paypal
+     
+  * Test configuration in  `sfPaymentPayPalPlugin/config/test.yml`
+
+        application_url: "http://localhost/payment_project/frontend_dev.php"
+        buyer_email: buyer_1248418913_per@letscod.com     #sandbox buyer account email
+        buyer_password: SFP123456                         #sandbox buyer account password
+        developer_email: symfony-plugins@letscod.com      #sandbox developer account
+        developer_password: sfPaymentPlugin1              #sandbox developer password
+        
+  * Test that your plugin is working by connecting to
+
+        http://localhost/payment_project/frontend_dev.php/sfPaymentPayPal/sample
+        
+    Sandbox credentials are available above. 
+
+**Note** : in the previous part, replace _localhost_ by your server hostname and _payment_project_ by the path to your symfony application.
+
+How to use it
+-------------
+
+An example using sfPaymentPayPalPlugin is available on the [sfPaymentPlugin page](http://www.symfony-project.org/plugins/sfPaymentPlugin "sfPaymentPlugin : standard, flexible and maintainable solution for managing online payments").
+
+Testing the plugin
+------------------
+
+A default (working) test configuration is provided so that you can check that the plugin behaves correctly by executing the following test :
+
+        $ php plugins/sfPaymentPayPalPlugin/test/unit/PaymentTest.php
+
+This test :
+
+  * connects to the sample payment page (`sfPaymentPayPalPlugin/modules/sfPaymentPayPal/templates/sampleSuccess.php`)
+  * clicks on the payment button
+  * signs in to PayPal developer (required to use the sandbox)
+  * connects to PayPal Test Store
+  * signs in to PayPal sandbox
+  * pays with the PayPal account
+  * returns to your application
+  * validates the IPN with PayPal
+
+Yes it works !
+
+![Passed payment test for sfPaymentPayPalPlugin](http://farm3.static.flickr.com/2567/3752175631_b772da3196.jpg?v=0 "Passed payment test for sfPaymentPayPalPlugin")
+
+A quick word on this test.
+
+  * For sure it's a functional test, however as it is dealing with an external service (PayPal sandbox), we had to use unit like tests (this is why it is located in the unit folder). We would be really interested in getting some ideas about this.
+  * We've defined a default (working) test configuration with some PayPal sandbox logins and passwords so that the test can be run easily (without having to register to PayPal sandbox...). The main configuration you have to change is the "application_url" as it is going to be specific to your environment and we cannot guess it.
+  * And yes... Johnny had a hard time on this one ;-)
+
+
+Feedback
+--------
+
+Please provide feedbacks, comments, support on the [symfony-payment-developers Google Group](http://groups.google.com/group/symfony-payment-developers "The symfony-payment-developers Google Group")
+
+             
+TODO
+----
+  * Support for [Website Payments Pro](https://www.paypal.com/cgi-bin/webscr?cmd=_wp-pro-overview-outside "Website Payments Pro"
+  * Define where and how to implement the test located in test/unit/TransactionTest.php
+  * Implement more tests
+  * Refactor, secure and update following sfPaymentPlugin modifications

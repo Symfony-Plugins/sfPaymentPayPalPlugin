@@ -1,0 +1,6 @@
+application_url: "http://localhost/payment_project/frontend_dev.php"
+#business: seller_1248418954_biz@letscod.com      #sandbox seller account email
+buyer_email: buyer_1248418913_per@letscod.com     #sandbox buyer account email
+buyer_password: SFP123456                         #sandbox buyer account password
+developer_email: symfony-plugins@letscod.com      #sandbox developer account
+developer_password: sfPaymentPlugin1              #sandbox developer password

@@ -1,0 +1,6 @@
+all: 
+  #sfPaymentPayPalPlugin
+  sf_payment_paypal_plugin: 
+    business: my_production_seller_account@business.com #seller account email on paypal
+    test: 
+      business: my_production_test_seller_account@business.com #test seller account email on paypal
