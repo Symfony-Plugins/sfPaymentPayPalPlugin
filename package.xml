@@ -7,11 +7,29 @@
     This plugin is part of the sfPayment plugins suite and brings PayPal support.
   </description>
   <lead>
-    <name></name>
-    <user></user>
-    <email></email>
+    <name>Antoine Leclercq</name>
+    <user>antoine.leclercq</user>
+    <email>antoine.leclercq@letscod.com</email>
     <active>yes</active>
   </lead>
+  <developer>
+    <name>Johnny Lattouf</name>
+    <user>johnny.lattouf</user>
+    <email>johnny.lattouf@letscod.com</email>
+    <active>yes</active>
+  </developer>
+  <developer>
+    <name>Marijn Huizendveld</name>
+    <user>marijn</user>
+    <email>marijn@round84.com</email>
+    <active>yes</active>
+  </developer>
+  <developer>
+    <name>Md Emran Hasan</name>
+    <user>phpfour</user>
+    <email>phpfour@gmail.com</email>
+    <active>yes</active>
+  </developer>
   <date>2009-07-24</date>
   <version>
     <release>0.1.0</release>
