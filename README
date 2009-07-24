@@ -4,6 +4,7 @@ sfPaymentPayPalPlugin
 **WARNING : This plugin is in alpha state, therefore NOT READY for production.
 It still needs contribution to be fully functional.** 
 
+This plugin is part of the sfPayment plugins suite and brings PayPal support. 
 This first version of the plugin (0.1.0) only supports [Website Payments Standard](https://www.paypal.com/cgi-bin/webscr?cmd=_wp-standard-overview-outside "Website Payments Standard").
 The following versions will provide Website Payments Pro.
 

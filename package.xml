@@ -2,9 +2,9 @@
 <package packagerversion="1.4.1" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
   <name>sfPaymentPayPalPlugin</name>
   <channel>pear.symfony-project.com</channel>
-  <summary></summary>
+  <summary>PayPal support for sfPaymentPlugin</summary>
   <description>
-    
+    This plugin is part of the sfPayment plugins suite and brings PayPal support.
   </description>
   <lead>
     <name></name>
@@ -24,7 +24,7 @@
   <license uri="http://www.symfony-project.com/license">
     MIT license
   </license>
-  <notes></notes>
+  <notes>This first version of the plugin (0.1.0) only supports Website Payments Standard.</notes>
  
   <contents>
     <dir name="/">
@@ -61,9 +61,7 @@
           <file role="data" name="functional.php" />
           <file role="data" name="unit.php" />
         </dir>
-        <dir name="functional">
-          <file role="data" name="PaymentTest.php" />
-        </dir>
+        <dir name="functional" />
         <dir name="unit">
           <file role="data" name="PaymentTest.php" />
         </dir>
@@ -121,7 +119,7 @@
     </license>
     <date>2009-07-24</date>
     <license>MIT</license>
-    <notes>Initial</notes>
+    <notes>This first version of the plugin (0.1.0) only supports Website Payments Standard.</notes>
   </release>
 </changelog>
 
